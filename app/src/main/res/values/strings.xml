@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">KakaoPay</string>
+    <string name="app_name_pay">pay</string>
+    <string name="tabbar_1">홈</string>
+    <string name="tabbar_2">자산관리</string>
+    <string name="tabbar_3">혜택</string>
+    <string name="tabbar_4">서비스</string>
+
+    <string name="top_card_main">조건 없이 최대 2.5%</string>
+    <string name="top_card_sub">카카오페이신용카드</string>
+    <string name="top_card_btn">바로가기</string>
+    
+    <string name="main_card_balance">0원</string>
+    <string name="main_card_charge">충전</string>
+    <string name="main_card_ad">비상금계좌 세전 연 0.6% 미니금고 카카오페이증권</string>
+    <string name="main_card_ad_2">세전 연 0.6% 미니금고 카카오페이증권</string>
+    
+    <string name="send">송금</string>
+    <string name="pay">결제</string>
+    <string name="pay_voucher">페이상품권</string>
+    <string name="loan">대출</string>
+    <string name="invest">투자</string>
+    <string name="insurance">보험</string>
+    <string name="doc">내문서함</string>
+    <string name="paycard">페이카드</string>
+
+    <string name="slide_card_1_img">slide card 1 img</string>
+    <string name="slide_card_2_img">slide card 2 img</string>
+    <string name="slide_card_1_main">주말, 카카오페이로\n편의점 털기!</string>
+    <string name="slide_card_1_sub">멤버십 가입 후 결제하면 적립</string>
+    <string name="slide_card_2_main">제값 주고 결제하세요?\n혜택 꿀팁 알려드려요</string>
+    <string name="slide_card_2_sub">쓸 때마다 최대 2.5% 적립</string>
+
+</resources>
