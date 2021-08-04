@@ -165,7 +165,7 @@
             <!--메인 카드-->
             <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
+                android:layout_height="170dp"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginVertical="5dp"
                 app:cardCornerRadius="15dp"
@@ -484,114 +484,24 @@
             <!--   슬라이드 카드-->
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="260dp"
-                        android:layout_height="320dp"
-                        android:layout_marginStart="15dp"
-                        android:backgroundTint="@color/card_green"
-                        app:cardCornerRadius="20dp">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:id="@+id/slide_card_1"
-                                android:layout_width="190dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginBottom="10dp"
-                                android:lineSpacingExtra="-3dp"
-                                android:text="@string/slide_card_1_main"
-                                android:textColor="@color/white"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/slide_card_1_sub"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/slide_card_1"
-                                android:layout_marginStart="15dp"
-                                android:text="@string/slide_card_1_sub"
-                                android:textColor="@color/white"
-                                android:textSize="13sp" />
-
-                            <ImageView
-                                android:layout_width="158dp"
-                                android:layout_height="171dp"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginTop="32dp"
-                                android:layout_marginEnd="13dp"
-                                android:layout_marginBottom="20dp"
-                                android:contentDescription="@string/slide_card_1_img"
-                                android:src="@drawable/slidecard_1" />
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="260dp"
-                        android:layout_height="320dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="15dp"
-                        android:backgroundTint="@color/card_blue"
-                        app:cardCornerRadius="20dp">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:id="@+id/slide_card_2"
-                                android:layout_width="190dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginBottom="10dp"
-                                android:lineSpacingExtra="-3dp"
-                                android:text="@string/slide_card_2_main"
-                                android:textColor="@color/white"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/slide_card_2_sub"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/slide_card_2"
-                                android:layout_marginStart="15dp"
-                                android:text="@string/slide_card_2_sub"
-                                android:textColor="@color/white"
-                                android:textSize="13sp" />
-
-                            <ImageView
-                                android:layout_width="163dp"
-                                android:layout_height="162dp"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginStart="17dp"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginEnd="13dp"
-                                android:layout_marginRight="22dp"
-                                android:layout_marginBottom="25dp"
-                                android:contentDescription="@string/slide_card_2_img"
-                                android:src="@drawable/slidecard_2" />
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
-
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="15dp"
+                        tools:listitem="@layout/layout_slideitem" />
                 </LinearLayout>
+
             </HorizontalScrollView>
 
 

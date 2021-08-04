@@ -12,18 +12,40 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.kakaopay.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_slideitem.*
 
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        Log.d("log", "onCreate")
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         mainCardSpan()
 
+        //recycler view
+        val cardList = arrayListOf(
+            SlideCards("주말, 카카오페이로\n편의점 털기!", "멤버십 가입 후 결제하면 적립", R.drawable.slidecard_1),
+            SlideCards("제값 주고 결제하세요?\n혜택 꿀팁 알려드려요", "쓸 때마다 최대 2.5% 적립", R.drawable.slidecard_2)
+
+            )
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.recyclerView.setHasFixedSize(true)
+        binding.recyclerView.adapter = RecyclerViewAdapter(cardList)
+
+        //간격 따로 지정
+        binding.recyclerView.addItemDecoration(RecyclerViewAdapter.HorizontalSpaceDecoration(10))
     }
+
+
+
 
 
 //    글자색 변경 span
@@ -37,34 +59,33 @@ class MainActivity : AppCompatActivity() {
         main_card_bottom_btn.text = spannableString
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.d("log", "onStart")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("log", "onResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("log","onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("log","onStop")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("log","onRestart")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("log","onDestroy")
-
-    }
+//    override fun onStart() {
+//        super.onStart()
+//        Log.d("log", "onStart")
+//    }
+//
+//    override fun onResume() {
+//        super.onResume()
+//        Log.d("log", "onResume")
+//    }
+//
+//    override fun onPause() {
+//        super.onPause()
+//        Log.d("log","onPause")
+//    }
+//
+//    override fun onStop() {
+//        super.onStop()
+//        Log.d("log","onStop")
+//    }
+//
+//    override fun onRestart() {
+//        super.onRestart()
+//        Log.d("log","onRestart")
+//    }
+//
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        Log.d("log","onDestroy")
+//    }
 }
